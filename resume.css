@@ -50,14 +50,17 @@ p.lead {
 .social-icons a:last-child {
     margin-right: 0;
 }
-.social-icons a:hover {
-    background-color: #dc3545;
+.social-icons a:first-child:hover {
+  background-color: #0077b5;
 }
-.dev-icons {
-    font-size: 3rem;
+.social-icons a:nth-child(2):hover {
+  background-color: #000000;
 }
-.dev-icons .list-inline-item i:hover {
-    color: #dc3545;
+.social-icons a:nth-child(3):hover {
+  background-color: #1da1f2;
+}
+.social-icons a:last-child:hover {
+  background-color: #3c5a99;
 }
 #sideNav .navbar-nav .nav-item .nav-link {
     font-weight: 800;
@@ -258,4 +261,64 @@ a:active, a:focus, a:hover {
 
 pre {
   color:#868e96;
+}
+
+.dev-icons {
+    font-size: 3rem;
+}
+
+.list-inline-item{
+    margin-bottom: 8px;
+    box-sizing: border-box; 
+    border-radius: 50%;
+    border:2px solid;
+    padding:15 10;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-inline-item:hover::after {
+    content: '';
+    background-color: #dc3545;
+    position: absolute;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    opacity: 0.9;
+}
+.icon-hover:hover::before {
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    z-index: 9;
+    font-size: 14px;
+    font-weight: bolder;
+    max-width: 88px;
+    text-align: center;
+    letter-spacing: 1px;
+} 
+
+.hover-text-html5:hover::before {
+    content: 'HTML 5'
+}
+.hover-text-css3:hover::before {
+    content: 'CSS 3'
+}
+.hover-text-js:hover::before {
+    content: 'JS'
+}
+.hover-text-angular:hover::before {
+    content: 'ANGULAR'
+}
+.hover-text-react:hover::before {
+    content: 'REACT'
+}
+.hover-text-nodejs:hover::before {
+    content: 'NODEJS'
+}
+.hover-text-npm:hover::before {
+    content: 'NPM'
 }
